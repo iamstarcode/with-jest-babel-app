@@ -16,9 +16,9 @@ export default function Counter({ defaultCounter, description }: { defaultCounte
                 </div>
                 <button aria-label="Decrement counter" onClick={() => setCount(count - incrementer)}>-</button>
                 <div >
-                    Current count:{count}
+                    {`Current count:${count}`}
                 </div>
-                <button aria-label="Increment counter" onClick={() => setCount(count + incrementer)}>+</button>
+                <button aria-label="Increment counter" onClick={() => setTimeout(()=> setCount(count + incrementer),200)}>+</button>
             </div>
         </div>
     )
